@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101110;
+    color: #eee;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    height: 70px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292b29;
+}
+
+.logo {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navlinks {
+    display: flex;
+    gap: 30px;
+}
+
+.navlinks a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navlinks a:hover,
+.projectLinks a:hover,
+.contactLinks a:hover,
+.viewMore:hover {
+    color: #fff;
+}
+
+main {
+    width: 84%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+    min-height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    align-items: center;
+    gap: 80px;
+}
+
+.label {
+    color: #8fae6b;
+    font-family: monospace;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(60px, 9vw, 110px);
+    margin-bottom: 30px;
+}
+
+.description {
+    color: #aaa;
+    font-family: monospace;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.profile {
+    width: 350px;
+    height: 450px;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #333;
+}
+
+.about,
+.portfolio,
+.experience,
+.activities,
+.contact {
+    border-top: 1px solid #292b29;
+}
+
+.about {
+    padding: 100px 0;
+    max-width: 800px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+.about p:not(.label) {
+    color: #aaa;
+    font-family: monospace;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill h4 {
+    font-size: 10px;
+    padding: 8px 15px;
+    border-radius: 2px;
+    background: rgb(12, 160, 34);
+}
+
+.portfolio {
+    padding: 100px 0;
+}
+
+.portfolio h2,
+.experience h2,
+.activities h2 {
+    margin-bottom: 40px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter,
+.viewMore {
+    background: #171917;
+    color: #888;
+    border: 1px solid #292b29;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.filter {
+    padding: 10px 18px;
+    font-size: 12px;
+}
+
+.filter:hover,
+.filter.active {
+    color: #fff;
+}
+
+.filter:hover {
+    border-color: #555;
+}
+
+.filter.active {
+    border-color: #8fae6b;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background: #171917;
+    border: 1px solid #292b29;
+    transition: 0.2s;
+}
+
+.project:hover {
+    border-color: #555;
+    transform: translateY(-4px);
+}
+
+.projectImage {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #292b29;
+}
+
+.projectBody {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.projectType,
+.experiencePeriod,
+.activityPeriod {
+    color: #8fae6b;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.projectType {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.projectTitle {
+    font-size: 20px;
+    margin-bottom: 12px;
+    min-height: 24px;
+}
+
+.projectDescription {
+    color: #888;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    min-height: 60px;
+    margin-bottom: 18px;
+}
+
+.tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.tech span {
+    border: 1px solid #303330;
+    color: #aaa;
+    padding: 5px 8px;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.projectLinks {
+    display: flex;
+    gap: 8px;
+}
+
+.projectLinks a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: 9px 5px;
+    border: 1px solid #333;
+    color: #aaa;
+    font-family: monospace;
+    font-size: 11px;
+}
+
+.experience,
+.activities {
+    padding: 100px 0;
+}
+
+.experienceList,
+.activityList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.experienceCard,
+.activityCard {
+    background: #171917;
+    border: 1px solid #292b29;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    min-height: 260px;
+}
+
+.experienceImage,
+.activityImage {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.experienceBody,
+.activityBody {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.experiencePeriod,
+.activityPeriod {
+    margin-bottom: 12px;
+}
+
+.experienceRole,
+.activityRole {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.experiencePlace,
+.activityPlace {
+    color: #aaa;
+    font-family: monospace;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.experienceDescription,
+.activityDescription {
+    color: #888;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+.contact {
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: clamp(45px, 7vw, 80px);
+    margin-bottom: 25px;
+}
+
+.contactDescription {
+    color: #888;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.contactLinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contactLinks a,
+.smbung a {
+    text-decoration: none;
+    font-family: monospace;
+    transition: 0.2s;
+}
+
+.contactLinks a {
+    color: #aaa;
+    border: 1px solid #292b29;
+    background: #171917;
+    padding: 12px 20px;
+    font-size: 12px;
+}
+
+
+.viewMoreContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.viewMore {
+    padding: 11px 24px;
+    font-size: 11px;
+    transition: 0.2s;
+}
+
+.viewMore:hover {
+    border-color: #8fae6b;
+    transform: translateY(-2px);
+}
+
+/* Hero Buttons */
+
+.smbung {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.smbung a {
+    padding: 11px 18px;
+    border: 1px solid #303330;
+    background: #171917;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.smbung a:hover {
+    color: #fff;
+    border-color: #8fae6b;
+    transform: translateY(-2px);
+}
+
+.smbung a:last-child {
+    color: #101110;
+    background: #8fae6b;
+    border-color: #8fae6b;
+}
+
+.smbung a:last-child:hover {
+    color: #101110;
+    background: #a4c47d;
+    border-color: #a4c47d;
+}
+
+
+@media (max-width: 1000px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .experienceList,
+    .activityList {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 80px 0;
+    }
+
+    .profile {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio {
+        padding: 80px 0;
+    }
+
+    .contact {
+        padding: 90px 0 60px;
+    }
+
+    .contactLinks {
+        flex-direction: column;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .experienceCard,
+    .activityCard {
+        grid-template-columns: 120px 1fr;
+    }
+
+    .experienceImage,
+    .activityImage {
+        min-height: 220px;
+    }
+
+    .experienceBody,
+    .activityBody {
+        padding: 18px;
+    }
+
+    .experienceRole,
+    .activityRole {
+        font-size: 16px;
+    }
+}
